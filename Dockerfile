@@ -36,9 +36,9 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && apt-get install -
 #
 RUN npm install -g aws-cdk@2.36.0
 #
-# install python packages needed for scripts
+# install python packages needed for cicd scripts 
 #
-RUN pip3 install boto3 psycopg2
+RUN pip3 install boto3 psycopg2 'aws-cdk-lib==2.23.0' 'constructs>=10.0.0,<11.0.0'
 #
 # install aws cli
 #
